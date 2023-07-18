@@ -10,7 +10,7 @@ app.use(morgan("combined"));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.send("This is shipping service test GET route");
 });
 
 // ! SHIPPING OPERATIONS
@@ -20,7 +20,7 @@ app.get("/shipping", (req, res) => {
 
 app.post("/shipping", (req, res) => {
   console.log("Calling Billing");
-  fetch("http://billing-service:5006/billing/",{
+  fetch("http://billing-service:5001/billing/",{
     method: "POST",
     body: JSON.stringify(req.body),
     headers: {

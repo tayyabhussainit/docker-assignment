@@ -10,7 +10,7 @@ app.use(morgan("combined"));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.send("This is billing service test GET route");
 });
 
 // ! BILLING OPERATIONS
@@ -32,5 +32,5 @@ app.delete("/billing", (req, res) => {
 });
 
 app.listen(5001, () => {
-  console.log("Billing service Started to listen on port 5001");
+  console.log("Billing Service Started to listen on port 5001");
 });
