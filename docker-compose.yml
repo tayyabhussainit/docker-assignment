@@ -1,0 +1,13 @@
+version: '3'
+services:
+  shipping-service:
+    build:
+      context: ./shipping-service
+    ports:
+      - '5000:5000'
+
+  billing-service:
+    build:
+      context: ./billing-service
+    ports:
+      - '5001:5001'
